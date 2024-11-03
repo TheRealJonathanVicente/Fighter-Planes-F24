@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * Time.deltaTime * speed);
 
         //Boundary Box 
+
+        /* Removes left/right boundary
         if (transform.position.x > 9.6)
         {
             transform.position = new Vector3(9.6f, transform.position.y, 0);
@@ -47,6 +49,8 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(-10f, transform.position.y, 0);
         }
+        */
+
 
         if (transform.position.y > 0.46)
         {
