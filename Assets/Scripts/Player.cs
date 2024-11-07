@@ -37,21 +37,12 @@ public class Player : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * Time.deltaTime * speed);
 
-        //Boundary Box 
-
-        /* Removes left/right boundary
-        if (transform.position.x > 9.6)
+        //Boundary Box + Looping
+        if (transform.position.x > 11.5f || transform.position.x <= -11.5f)
         {
-            transform.position = new Vector3(9.6f, transform.position.y, 0);
+            transform.position = new Vector3(transform.position.x * -1, transform.position.y, 0);
         }
-
-        if (transform.position.x <= -10)
-        {
-            transform.position = new Vector3(-10f, transform.position.y, 0);
-        }
-        */
-
-
+        
         if (transform.position.y > 0.46)
         {
             transform.position = new Vector3(transform.position.x, 0.46f, 0);
