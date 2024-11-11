@@ -83,6 +83,6 @@ public class Player : MonoBehaviour
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().LoseLives(1);            
         }
-        
+
     }
 }
