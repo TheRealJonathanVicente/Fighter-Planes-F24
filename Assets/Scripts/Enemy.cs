@@ -5,18 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+    public Vector3 initialRotation = new Vector3(0, 0, -180);
     public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.rotation = Quaternion.Euler(initialRotation);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * 3f);
+        transform.Translate(new Vector3(0, 3, 0) * Time.deltaTime * 3f);
 
         if (transform.position.y < -8f)
         {
