@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     
     public GameObject explosion;
     public GameObject bullet;
+    public GameObject sheild;
     public GameObject leftThruster;
     public GameObject rightThruster;
 
@@ -94,21 +95,22 @@ public class Player : MonoBehaviour
         //lives -= 1
         if (hasShield == false)
         {
-            lives--;
+            gameManager.LoseLives(1);
+            lives -= 1;
         }
-        else if (hasShield != true)
+        else if (hasShield == true)
         {
-            //lose the shield
-            //no longer have a shield
+            hasShield = false;
+            sheild.gameObject.SetActive(false);
         }
-
         if (lives == 0)
         {
             gameManager.GameOver();
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
-    }
+    } 
+    
 
     IEnumerator SpeedPowerDown()
     {
@@ -126,12 +128,20 @@ public class Player : MonoBehaviour
         gameManager.UpdatePowerupText("");
     }
 
+    IEnumerator SheildPowerDown()
+    {
+        yield return new WaitForSeconds(3f);
+        hasShield = false;
+        sheild.gameObject.SetActive(false);
+        gameManager.UpdatePowerupText("");
+    }
+
     private void OnTriggerEnter2D(Collider2D whatDidIHit)
     {
-        if (whatDidIHit.tag == "Enemy")
-        {
-            GameObject.Find("GameManager").GetComponent<GameManager>().LoseLives(1);            
-        }
+        //if (whatDidIHit.tag == "Enemy")
+        //{
+        //    LoseALife();          
+        //}
 
         if (whatDidIHit.tag == "PowerUp")
         {
@@ -162,7 +172,9 @@ public class Player : MonoBehaviour
                 case 4:
                     //shield
                     gameManager.UpdatePowerupText("Picked up Shield!");
-                    hasShield = false;
+                    hasShield = true;
+                    sheild.gameObject.SetActive(true);
+                    StartCoroutine (SheildPowerDown());
                     break;
             }
             Destroy(whatDidIHit.gameObject);

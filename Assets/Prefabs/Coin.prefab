@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 770284089961609152}
   - component: {fileID: 2710176526446512687}
   - component: {fileID: -8627365002072926236}
-  - component: {fileID: -5125064118049057966}
+  - component: {fileID: 2945198319973129777}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Collectable
@@ -136,7 +136,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 99de9c9d9e8ebef4c964dd2d7217508c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -221,7 +221,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-5125064118049057966
+--- !u!114 &2945198319973129777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
