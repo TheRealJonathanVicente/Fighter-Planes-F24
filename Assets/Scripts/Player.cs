@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     
     public GameObject explosion;
     public GameObject bullet;
-    public GameObject sheild;
+    public GameObject shield;
     public GameObject leftThruster;
     public GameObject rightThruster;
 
@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
         else if (hasShield == true)
         {
             hasShield = false;
-            sheild.gameObject.SetActive(false);
+            shield.gameObject.SetActive(false);
         }
         if (lives == 0)
         {
@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
     IEnumerator SpeedPowerDown()
     {
         yield return new WaitForSeconds(3f);
+        gameManager.PlayPowerDown();
         speed = 8f;
         leftThruster.gameObject.SetActive(false);
         rightThruster.gameObject.SetActive(false);
@@ -124,15 +125,17 @@ public class Player : MonoBehaviour
     IEnumerator ShootingPowerDown()
     {
         yield return new WaitForSeconds(3f);
+        gameManager.PlayPowerDown();
         shooting = 1;
         gameManager.UpdatePowerupText("");
     }
 
-    IEnumerator SheildPowerDown()
+    IEnumerator ShieldPowerDown()
     {
         yield return new WaitForSeconds(3f);
+        gameManager.PlayPowerDown();
         hasShield = false;
-        sheild.gameObject.SetActive(false);
+        shield.gameObject.SetActive(false);
         gameManager.UpdatePowerupText("");
     }
 
@@ -173,8 +176,8 @@ public class Player : MonoBehaviour
                     //shield
                     gameManager.UpdatePowerupText("Picked up Shield!");
                     hasShield = true;
-                    sheild.gameObject.SetActive(true);
-                    StartCoroutine (SheildPowerDown());
+                    shield.gameObject.SetActive(true);
+                    StartCoroutine (ShieldPowerDown());
                     break;
             }
             Destroy(whatDidIHit.gameObject);

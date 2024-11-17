@@ -8,10 +8,16 @@ MonoImporter:
   - enemy: {fileID: 3118898994249917654, guid: 3fcd728be90940d4ba14f8ae7a6b7a89, type: 3}
   - enemy2: {fileID: 1884240886172195797, guid: 67d04064e8057cb4187cb35478706b00, type: 3}
   - enemy3: {fileID: 5738002135262638091, guid: e00ff7139cd007c4385305dca178f323, type: 3}
-  - coin: {fileID: 2675930192534063172, guid: 5f3466171c075dc44861b62ed9cf4581, type: 3}
+  - coin: {fileID: 5766057297554073762, guid: 5f3466171c075dc44861b62ed9cf4581, type: 3}
+  - powerup: {fileID: 5747932309661940598, guid: bfda659d92ff55342aaf99a7353e47b8, type: 3}
   - cloud: {fileID: 4741465932954077582, guid: fca009173e6269845b1f7196a791df93, type: 3}
+  - powerUp: {fileID: 8300000, guid: e3a1440c51180d9468520a9661a928a1, type: 3}
+  - powerDown: {fileID: 8300000, guid: 2443c6b915b8e334e93b3da898381cd9, type: 3}
   - scoreText: {instanceID: 0}
   - livesText: {instanceID: 0}
+  - gameOverText: {instanceID: 0}
+  - restartText: {instanceID: 0}
+  - powerupText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

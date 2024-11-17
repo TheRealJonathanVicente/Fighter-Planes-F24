@@ -3,7 +3,13 @@ guid: 9ce2072f805fdaa488fda99805d140f2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gameManager: {instanceID: 0}
+  - explosion: {fileID: 7004352948258204655, guid: 6ff381a9329a8c84db4c499b0e99e4ef, type: 3}
+  - bullet: {fileID: 3212655081819990822, guid: 4dea0cfd33aea984c8f1a75c838e3848, type: 3}
+  - shield: {fileID: 1575254387113118734, guid: c105ceceb2fc11a4ba2fdadf2128f0f1, type: 3}
+  - leftThruster: {fileID: 1574811359607847448, guid: 958e0329e5acb6e44ba690a0960058b1, type: 3}
+  - rightThruster: {fileID: 4734473207852315023, guid: 9443b2cc308424a41b7679afcb3285ac, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
