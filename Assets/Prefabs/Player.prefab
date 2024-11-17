@@ -238,8 +238,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7443791229826189277}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.06, y: -0.54, z: 4.19134}
-  m_LocalScale: {x: 1.8514049, y: 1.8514049, z: 1.8514049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5760849400999371546}
@@ -424,6 +424,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   explosion: {fileID: 7004352948258204655, guid: 6ff381a9329a8c84db4c499b0e99e4ef, type: 3}
   bullet: {fileID: 3212655081819990822, guid: 4dea0cfd33aea984c8f1a75c838e3848, type: 3}
+  sheild: {fileID: 7443791229826189277}
   leftThruster: {fileID: 3338881228906288116}
   rightThruster: {fileID: 2067691154718243718}
 --- !u!61 &5525478015208354869

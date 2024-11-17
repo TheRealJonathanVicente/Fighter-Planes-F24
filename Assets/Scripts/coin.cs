@@ -34,6 +34,7 @@ public class Coin : MonoBehaviour
     {
         if (whatDidIHit.tag == "Player")
         {
+            Debug.Log("Hit coin");
             GameObject.Find("GameManager").GetComponent<GameManager>().EarnScore(1);
             StartCoroutine(playSoundAndDie());
         }
