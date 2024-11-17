@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class coin : MonoBehaviour
+public class Coin : MonoBehaviour
 {
     // How many points the coin is worth
     public int value = 1;
@@ -45,7 +45,7 @@ public class coin : MonoBehaviour
         source.Play();
 
         // Makes coin uninteractable and invisible
-        GetComponent<BoxCollider2D>().isTrigger = false;
+        GetComponent<CircleCollider2D>().isTrigger = false;
         GetComponentInChildren<SpriteRenderer>().color = Color.clear;
 
         // Waits for 1 second then destroys the coin.

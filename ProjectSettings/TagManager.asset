@@ -7,6 +7,7 @@ TagManager:
   - Weapon
   - Enemy
   - Collectable
+  - PowerUp
   layers:
   - Default
   - TransparentFX
